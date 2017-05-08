@@ -1,5 +1,10 @@
 # somdfreenrgbatch
 
+This is a brief summary of the steps taken to setup, simulate and analyse relative binding free energy calculations 
+as part of the D3R 2016 grand challenge using the codes FESetup and somd-freenrg. 
+The scripts are customised for deployment on a specific cluster. The protocol is evolving with every projects and 
+the code below was tested with sire 2016.1. 
+
 @@@ Stage 1 = Generate input files with FESetup
 
 cd $BASEDIR/fesetup
