@@ -1,0 +1,77 @@
+FE_type = Sire
+AFE.separate_vdw_elec = False
+mcs.match_by = spatially-closest
+
+[globals]
+forcefield = amber, ff14SB, tip3p
+gaff = gaff2
+logfile = dGmorph.log
+
+[ligand]
+basedir = poses
+file.name = ligand.pdb
+box.type = rectangular
+
+morph_pairs = FXR_79_BM1A > Int01_BM1 , Int01_BM1  > FXR_79_BM1A, 
+              FXR_79_BM2A > Int01_BM2 , Int01_BM2  > FXR_79_BM2A,
+              FXR_79_BM1B > Int01_BM1 , Int01_BM1  > FXR_79_BM1B, 
+              FXR_79_BM2B > Int01_BM2 , Int01_BM2  > FXR_79_BM2B,
+              FXR_73_BM1  > Int01_BM1,  Int01_BM1  > FXR_73_BM1, 
+              FXR_73_BM1  > FXR_73_BM2 /31=31, FXR_73_BM2 > FXR_73_BM1 /31=31, 
+              FXR_73_BM2  > Int01_BM2 , Int01_BM2  > FXR_73_BM2,  
+              FXR_75_BM1  > Int01_BM1 , Int01_BM1  > FXR_75_BM1, 
+              Int01_BM1   > Int01_BM2 /31=31, Int01_BM2  > Int01_BM1 /31=31, 
+              Int01_BM2   > FXR_75_BM2, FXR_75_BM2 > Int01_BM2, 
+              Int01_BM1   > FXR_10_BM1, FXR_10_BM1 > Int01_BM1, 
+              Int01_BM2   > FXR_10_BM2, FXR_10_BM2 > Int01_BM2, 
+              FXR_10_BM1  > FXR_38_BM1, FXR_38_BM1 > FXR_10_BM1, 
+              FXR_10_BM1  > FXR_10_BM2 /31=31, FXR_10_BM2 > FXR_10_BM1 /31=31, 
+              FXR_10_BM2  > FXR_38_BM2, FXR_38_BM2 > FXR_10_BM2, 
+              FXR_10_BM1  > Int02     , Int02      > FXR_10_BM1,                 
+              FXR_10_BM2  > Int02     , Int02      > FXR_10_BM2, 
+              FXR_76      > Int02 /15=47 , Int02   > FXR_76 /47=15, 
+              FXR_76      > FXR_78    , FXR_78     > FXR_76    , 
+              FXR_76      > FXR_77_BM2, FXR_77_BM2 > FXR_76    , 
+              FXR_77_BM2  > FXR_81_BM2 /36=36, FXR_81_BM2 > FXR_77_BM2 /36=36, 
+              FXR_76      > FXR_81_BM2, FXR_81_BM2 > FXR_76    , 
+              FXR_76      > FXR_82_BM2, FXR_82_BM2 > FXR_76    , 
+              FXR_81_BM2  > FXR_82_BM2 /36=36, FXR_82_BM2 > FXR_81_BM2 /36=36,
+              FXR_76      > FXR_83_BM2, FXR_83_BM2 > FXR_76    , 
+              FXR_82_BM2  > FXR_83_BM2, FXR_83_BM2 > FXR_82_BM2, 
+              FXR_76      > FXR_89    , FXR_89     > FXR_76    , 
+              FXR_76      > FXR_88_BM2, FXR_88_BM2 > FXR_76    , 
+              FXR_76      > FXR_85_BM2, FXR_85_BM2 > FXR_76    ,
+              FXR_88_BM2  > FXR_85_BM2, FXR_85_BM2 > FXR_88_BM2,
+              FXR_76      > FXR_74_BM2, FXR_74_BM2 > FXR_76, 
+              FXR_74_BM2  > FXR_85_BM2, FXR_85_BM2 > FXR_74_BM2, 
+              FXR_76      > FXR_84_BM2, FXR_84_BM2 > FXR_76    , 
+              FXR_84_BM2  > FXR_74_BM2 /36=36, FXR_74_BM2 > FXR_84_BM2 /36=36,
+              FXR_76      > FXR_12_BM2, FXR_12_BM2 > FXR_76    ,
+              FXR_12_BM2  > FXR_84_BM2 /35=36, FXR_84_BM2 > FXR_12_BM2 /36=35,
+              FXR_12_BM2  > FXR_41_BM2, FXR_41_BM2 > FXR_12_BM2,
+              FXR_76      > FXR_77_BM1, FXR_77_BM1 > FXR_76    ,
+              FXR_77_BM1  > FXR_81_BM1 /34=34, FXR_81_BM1 > FXR_77_BM1 /34=34,
+              FXR_76      > FXR_81_BM1, FXR_81_BM1 > FXR_76    ,
+              FXR_76      > FXR_82_BM1, FXR_82_BM1 > FXR_76    ,
+              FXR_81_BM1  > FXR_82_BM1 /34=34, FXR_82_BM1 > FXR_81_BM1 /34=34,
+              FXR_76      > FXR_83_BM1, FXR_83_BM1 > FXR_76    ,
+              FXR_82_BM1  > FXR_83_BM1 /34=34, FXR_83_BM1 > FXR_82_BM1 /34=34,
+              FXR_76      > FXR_88_BM1, FXR_88_BM1 > FXR_76    ,
+              FXR_76      > FXR_85_BM1, FXR_85_BM1 > FXR_76    ,
+              FXR_88_BM1  > FXR_85_BM1, FXR_85_BM1 > FXR_88_BM1,
+              FXR_76      > FXR_74_BM1, FXR_74_BM1 > FXR_76    ,
+              FXR_74_BM1  > FXR_85_BM1 /34=34, FXR_85_BM1 > FXR_74_BM1 /34=34,
+              FXR_76      > FXR_84_BM1, FXR_84_BM1 > FXR_76    ,
+              FXR_84_BM1  > FXR_74_BM1 /34=34, FXR_74_BM1 > FXR_84_BM1 /34=34,
+              FXR_76      > FXR_12_BM1, FXR_12_BM1 > FXR_76    ,
+              FXR_12_BM1  > FXR_84_BM1 /34=34, FXR_84_BM1 > FXR_12_BM1 /34=34,
+              FXR_12_BM1  > FXR_41_BM1, FXR_41_BM1 > FXR_12_BM1
+
+[protein]
+basedir = protein
+file.name = fxr_md_v4_wat.pdb
+molecules = SIM 
+
+[complex]
+box.type = rectangular
+
