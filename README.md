@@ -40,6 +40,9 @@ sim-solvated-ncycles-100-* --> config files. Set to run a 4ns simulation for eac
 
 cd $BASEDIR/run
 
+Edit the file jobtype.dat to specify the number of windows to use for a given perturbation (9, 17 or 26). This depends on whether you consider a perturbation to be 
+'easy', 'medium' or 'hard'. In this use case we based our decision on preliminary results we obtained from a previous batch. 
+
 bash ./setupall.sh
 bash ./run1all.sh
 
