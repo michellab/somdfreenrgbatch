@@ -32,7 +32,7 @@ Most files do not need to be changed here. However take a look at the scripts su
 cd scripts
 
 This contains three types of files
-mbar-*.sh --> mbar slurm analysis scripts. Cluster specific. There are three variants, each for a given lambda schedule (NOTE: This was for sire 2016.X. The analyse_freenrg UI has been overhauled in sire 2017.1)
+mbar.sh --> mbar slurm analysis scripts. Cluster specific. 
 somd-gpu*.sh --> somd-freenrg submission scripts with three different lambda schedule. Cluster specific.
 sim-solvated-ncycles-100-* --> config files. Set to run a 4ns simulation for each lambda value. Adjust nmoves, ncycles to change the length of the trajectory. 
 
