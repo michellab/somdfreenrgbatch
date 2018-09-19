@@ -50,8 +50,8 @@ os.system(cmd)
 cmd  = "ln -s somd-gpu-%s.sh somd-gpu.sh" % nw
 os.system(cmd)
 
-cmd  = "ln -s mbar-%s.sh mbar.sh" % nw
-os.system(cmd)
+#cmd  = "ln -s mbar-%s.sh mbar.sh" % nw
+#os.system(cmd)
 
 os.chdir("../../")
 
