@@ -1,12 +1,14 @@
 #!/bin/bash
 #SBATCH -o somd-array-gpu-%A.%a.out
-#SBATCH -p GTX
+#SBATCH -p Tesla
 #SBATCH -n 1
 #SBATCH --gres=gpu:1
 #SBATCH --time 24:00:00
 #SBATCH --array=0-16
 
 module load cuda/7.5
+module load sire/17.1.0_no_avx
+module load openmm/6.3
 
 echo "CUDA DEVICES:" $CUDA_VISIBLE_DEVICES
 
@@ -22,7 +24,7 @@ cd lambda-$lam
 
 export OPENMM_PLUGIN_DIR=/home/julien/sire.app/lib/plugins/
 
-srun /home/julien/sire.app/bin/somd-freenrg -C ../../input/sim.cfg -l $lam -p CUDA
+srun somd-freenrg -C ../../input/sim.cfg -l $lam -p CUDA
 cd ..
 
 wait

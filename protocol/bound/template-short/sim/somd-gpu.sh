@@ -1,1 +1,0 @@
-../../../scripts/somd-gpu-distres.sh
